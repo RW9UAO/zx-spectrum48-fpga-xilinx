@@ -39,13 +39,13 @@ sigrok с fx2law работает с непрошитым ничем FX2LP чи�
 
 делаем буферный регистр, в который будут защелкиваться данные для процессора и не пересекаться с данныи от видеоконтроллера. это все прозрачный доступ.  
 
-  // register for solid CPU data read from RAM
-  // prevent data damage from video controller
-  always @(posedge clk_150mhz)begin
+    // register for solid CPU data read from RAM
+    // prevent data damage from video controller
+    always @(posedge clk_150mhz)begin
 	  if(vid_sel == 0 && cpu_rd_n == 0 && cpu_mreq_n == 0)begin
   		sram_do_r <= sram_do;
   	end
-  end  
+    end  
   
 и вуаля! тест пошел! и прошел! и запустилась romBIOS48 и показала приветствие.  
 
