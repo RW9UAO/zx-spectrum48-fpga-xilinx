@@ -1,0 +1,75 @@
+
+# 50M CLK Pin
+NET "CLK_50M" LOC = T8;
+
+# KEY Pin
+//NET "key[3]" LOC = L3;
+//NET "key[2]" LOC = L4;
+//NET "key[1]" LOC = M3;
+//NET "key[0]" LOC = L5;
+//NET "key" LOC = L5;
+NET "reset" LOC = H2 | IOSTANDARD = "LVCMOS33" | CLOCK_DEDICATED_ROUTE = FALSE;
+
+# VGA
+NET "VGA_HSYNC" LOC = B6;
+NET "VGA_VSYNC" LOC = A6;
+
+NET "VGA_R[0]" LOC = D11;
+NET "VGA_R[1]" LOC = C11;
+NET "VGA_R[2]" LOC = A4;
+NET "VGA_R[3]" LOC = A5;
+NET "VGA_R[4]" LOC = B5;
+
+NET "VGA_G[0]" LOC = F9;
+NET "VGA_G[1]" LOC = E10;
+NET "VGA_G[2]" LOC = D9;
+NET "VGA_G[3]" LOC = C9;
+NET "VGA_G[4]" LOC = E11;
+NET "VGA_G[5]" LOC = C10;
+
+NET "VGA_B[0]" LOC = F7;
+NET "VGA_B[1]" LOC = C7;
+NET "VGA_B[2]" LOC = E7;
+NET "VGA_B[3]" LOC = D8;
+NET "VGA_B[4]" LOC = E8;
+
+# PS2
+NET "PS2_KBCLK" LOC = C6;
+NET "PS2_KBDAT" LOC = D6;
+
+# ZX sound out
+NET "BUZZER" LOC = P11;
+// NET "tape_out" LOC = ??;
+NET "tape_in" LOC = T15;
+
+//PIN "PLL14/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+
+# on board LEDs
+//NET "LED[0]" LOC = N9;
+//NET "LED[1]" LOC = P9;
+//NET "LED[2]" LOC = L10;
+//NET "LED[3]" LOC = M10;
+//NET "LED[4]" LOC = P11;
+//NET "LED[5]" LOC = M11;
+//NET "LED[6]" LOC = P12;
+//NET "LED[7]" LOC = N12;
+
+## full 16 bit on empty EEPROM with sigrok
+NET "usb_dbg[15]" LOC = J13;
+NET "usb_dbg[14]" LOC = K14;
+NET "usb_dbg[13]" LOC = K12;
+NET "usb_dbg[12]" LOC = K15;
+NET "usb_dbg[11]" LOC = K16;
+NET "usb_dbg[10]" LOC = J16;
+NET "usb_dbg[9]" LOC = H16;
+NET "usb_dbg[8]" LOC = H15;
+## only low 8 bit for saleae logic
+NET "usb_dbg[7]" LOC = F16;
+NET "usb_dbg[6]" LOC = F15;
+NET "usb_dbg[5]" LOC = E16;
+NET "usb_dbg[4]" LOC = E15;
+NET "usb_dbg[3]" LOC = B16;
+NET "usb_dbg[2]" LOC = C15;
+NET "usb_dbg[1]" LOC = C16;
+NET "usb_dbg[0]" LOC = D16;
+
